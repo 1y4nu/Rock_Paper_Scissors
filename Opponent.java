@@ -5,11 +5,11 @@ public class Opponent {
 		Random random = new Random();
 		int num = random.nextInt(2);	//Random number between 0 - 2
 		if (num == 0)
-			this.move = "rock";
+			this.move = "Rock";
 		else if (num == 1)
-			this.move = "paper";
+			this.move = "Paper";
 		else
-			this.move = "scissors";
+			this.move = "Scissors";
 	}
 
 	public String getMove() {
