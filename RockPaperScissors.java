@@ -13,8 +13,26 @@ public class RockPaperScissors {
 
 		if (user.getMove().equals(opponent.getMove()))
 			outcome = "Tie! " + user.getMove() + " vs " + opponent.getMove();
-		else
-			outcome = "Keep Testing";
+		else {
+			if (user.getMove().equals("Rock")) {
+				if (opponent.getMove().equals("Scissors")) 
+					outcome = "Rock beats Scissors, You win!";
+				else
+					outcome = "Paper beats Rock, You lose!";
+			}
+			else if (user.getMove().equals("Paper")) {
+				if (opponent.getMove().equals("Rock")) 
+					outcome = "Paper beats Rock, You win!";
+				else
+					outcome = "Scissors beats Paper, You lose!";
+			}
+			else if (user.getMove().equals("Scissors")) {
+				if (opponent.getMove().equals("Paper")) 
+					outcome = "Scissors beats Paper, You win!";
+				else
+					outcome = "Rock beats Scissors, You lose!";
+			}
+		}
 		System.out.println(outcome);
 	}
 }
